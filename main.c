@@ -1,10 +1,13 @@
 #include <display7x4.h>
 
+/*
+* Remember to call init() function
+*/
 
 /*
  * main.c
  *
- *  Author: Francesco Mecatti
+ * Author: Francesco Mecatti
  */
 
 
