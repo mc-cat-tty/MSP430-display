@@ -4,8 +4,7 @@
 /*
  * main.c
  *
- *  Created on: 17 gen 2020
- *      Author: utente
+ *  Author: Francesco Mecatti
  */
 
 
