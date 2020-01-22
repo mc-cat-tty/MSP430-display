@@ -3,4 +3,4 @@ This is a library for MSP430F5529 that allows to drive boards with four 7 segmen
 
 ## Scheme
 
-![Scheme](/Scheme.jpg)
+![Scheme](Scheme.jpg)
