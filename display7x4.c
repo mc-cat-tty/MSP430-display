@@ -38,25 +38,29 @@ void toggle(out o){
 }
 
 void all_segments_on(void){
-    for (int i=0; i<SEGMENTS_NUM; i++){
+    int i;
+    for (i=0; i<SEGMENTS_NUM; i++){
         on(segments_arr[i]);
     }
 }
 
 void all_segments_off(void){
-    for (int i=0; i<SEGMENTS_NUM; i++){
+    int i;
+    for (i=0; i<SEGMENTS_NUM; i++){
         off(segments_arr[i]);
     }
 }
 
 void all_selectors_on(void){
-    for (int i=0; i<SELECTORS_NUM; i++){
+    int i;
+    for (i=0; i<SELECTORS_NUM; i++){
         on(selectors_arr[i]);
     }
 }
 
 void all_selectors_off(void){
-    for (int i=0; i<SELECTORS_NUM; i++){
+    int i;
+    for (i=0; i<SELECTORS_NUM; i++){
         off(selectors_arr[i]);
     }
 }
@@ -176,8 +180,8 @@ uint8_t get(uint16_t num, uint8_t pos) {  // Returns digit at position pos
             return (num/0x100);
         case 3:
             return (num/0x1000);
-        return 0x00;
     }
+    return 0x00;
 }
 
 void blink(out o, int ms){
@@ -214,9 +218,10 @@ void display(uint16_t num, color c){
 }
 
 void display_readable(uint16_t num, color c, int time){  // 'time' represent how much time (in ms) 'num' will be shown
+    int i;
     time /= (float) 9.9;  // Divisor obtained empirically
     if (c == YELLOW){
-        for (int i=0; i<time; i++){
+        for (i=0; i<time; i++){
             if (i%2 == 0)
                 display(num, GREEN);
             else
@@ -224,7 +229,7 @@ void display_readable(uint16_t num, color c, int time){  // 'time' represent how
         }
     }
     else{
-        for (int i=0; i<time; i++){
+        for (i=0; i<time; i++){
             display(num, c);
         }
     }
