@@ -12,6 +12,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdbool.h>
 
 #define SEGMENTS_NUM 8
 #define SELECTORS_NUM 8
@@ -60,10 +61,17 @@ void all_off(void);
 void toggle(out);
 void dir_out(void);
 void hex_on(uint8_t);
+void dec_on(uint8_t);
+void char_on(char);
 void delay_ms(int);
-uint8_t get(uint16_t, uint8_t);
+uint8_t get(uint16_t, uint8_t);  // Default: hex
+uint8_t get_decimal(uint16_t, uint8_t);
 void blink(out, int);
-void display(uint16_t, color);
+void display(uint16_t, color);  // For numbers
 void display_readable(uint16_t, color, int);
+void display_decimal(uint16_t, color, bool*);
+void display_decimal_readable(uint16_t, color);
+void display_text(char*, color);  // For strings (case insensitive)
+void display_text_readable(char*, color, int);
 
 #endif //INCLUDE_DISPLAY7X4_H_
