@@ -1,24 +1,18 @@
-#include <display7x4.h>
-
-/*
-* Remember to call init() function
-*/
+#include <msp430.h>
+#include "display7x4.h"
 
 /*
  * main.c
  *
- * Author: Francesco Mecatti
+ *  Created on: 24 gen 2020
+ *      Author: utente
  */
 
 
-int main(void)
-  {
-    WDTCTL = WDTPW | WDTHOLD;   // stop watchdog timer
-    uint16_t i;
+void main (void) {
+    WDTCTL = WDTPW + WDTHOLD;
     init();
     while (1) {
-        for (i=0x0000; i<=0xffff; i++){
-            display_readable(i, YELLOW, 500);
-        }
+        display_text_loop("Sacripante", RED, 500, 100);
     }
 }

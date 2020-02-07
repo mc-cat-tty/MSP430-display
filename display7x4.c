@@ -511,19 +511,61 @@ void display_text(char *text, color c){  // Four characters-long text
         }
 }
 
-void display_text_readable(char *text, color c, int time){
+void display_text_sliding(char *text, color c, int time){
     int i, j;
     int len = strlen(text);
     time /= (float) 9.9;  // Divisor obtained empirically
-    if (len == 4){
-        for (i=0; i<(time/len); i++){
-            display_text(text, c);
+    for (i=0; i<len+1; i++){
+        for (j=0; j<(time/len); j++){
+            display_text((text+i), c);
         }
     }
-    else {
-        for (i=0; i<len+1; i++){
-            for (j=0; j<(time/len); j++){
-                display_text((text+i), c);
+}
+
+void display_text_loop(char *text, color c, int time, int num_of_time) {  // Delay = time [ms] * number_of_time
+    static const int ms = 1;
+    int i, j;
+    int len = strlen(text);
+    time /= (float) 9.9;
+    for (i=0; i<num_of_time; i++) {
+        for (j=0; j<time; j++) {
+            switch (c) {
+                case RED:
+                    if (text[(i+0)%(len+1)] != '\0'){
+                        char_on(text[(i+0)%(len+1)]);
+                        blink(R4, ms);
+                    }
+                    if (text[(i+1)%(len+1)] != '\0'){
+                        char_on(text[(i+1)%(len+1)]);
+                        blink(R3, ms);
+                    }
+                    if (text[(i+2)%(len+1)] != '\0'){
+                        char_on(text[(i+2)%(len+1)]);
+                        blink(R2, ms);
+                    }
+                    if (text[(i+3)%(len+1)] != '\0'){
+                        char_on(text[(i+3)%(len+1)]);
+                        blink(R1, ms);
+                    }
+                    break;
+                case GREEN:
+                    if (text[(i+0)%(len+1)] != '\0'){
+                        char_on(text[(i+0)%(len+1)]);
+                        blink(G4, ms);
+                    }
+                    if (text[(i+1)%(len+1)] != '\0'){
+                        char_on(text[(i+1)%(len+1)]);
+                        blink(G3, ms);
+                    }
+                    if (text[(i+2)%(len+1)] != '\0'){
+                        char_on(text[(i+2)%(len+1)]);
+                        blink(G2, ms);
+                    }
+                    if (text[(i+3)%(len+1)] != '\0'){
+                        char_on(text[(i+3)%(len+1)]);
+                        blink(G1, ms);
+                    }
+                    break;
             }
         }
     }

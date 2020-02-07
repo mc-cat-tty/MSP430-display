@@ -72,6 +72,7 @@ void display_readable(uint16_t, color, int);
 void display_decimal(uint16_t, color, bool*);
 void display_decimal_readable(uint16_t, color);
 void display_text(char*, color);  // For strings (case insensitive)
-void display_text_readable(char*, color, int);
+void display_text_sliding(char*, color, int);
+void display_text_loop(char*, color, int, int);
 
 #endif //INCLUDE_DISPLAY7X4_H_
