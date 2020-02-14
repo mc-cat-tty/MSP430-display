@@ -46,7 +46,6 @@ out segments_arr[SEGMENTS_NUM];  // Arrays
 out selectors_arr[SELECTORS_NUM];
 out out_arr[OUT_NUM];
 
-void setup(void);
 void init(void);
 void on(out);
 void off(out);
