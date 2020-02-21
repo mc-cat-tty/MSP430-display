@@ -1,6 +1,6 @@
 # MSP430 4 x 7_segment_display
 This is a library for MSP430F5529 that allows to drive boards with four 7 segments displays.
-It includes C functions to handle connection between MSP430 and the board, provides means to display strings and integers on four seven segments displays in different ways.
+It includes C functions to handle connection between MSP430 and the board; it also provides means to display strings and integers on four seven segments displays, in many different ways.
 
 ## Getting Started
 This section provides essential instructions on how to use this library
