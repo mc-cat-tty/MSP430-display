@@ -13,15 +13,17 @@ This section provides essential instructions on how to use this library
 To use this library you have to `#include "display7x4.h"`
 
 ### Requirements and Building
-The `display7x4.c` library contains no external dependencies, it only requires one of the following compler to be built successfully:
+The `display7x4.c` library contains no external dependencies, it only requires one of the following compiler to be built successfully:
  - GNU for msp430f5529
  - TI compiler for msp430f5529
+These compilers have been tested and they work fine with the functions in the library.
 
 I suggest you to work on either CCS or IAR environments
 
 ### How to use it
 Keep in mind to call the `init()` function before using any function defined in the library.
 This function is meant to initialize all the pins needed by the other functions.
+After that you can do whatever you want.
 
 ##  Running the tests
 First of all, you can test if the environment is configurated properly by running the `main.c` program.
@@ -35,9 +37,6 @@ Run master -> Examples -> Stopwatch -> main.c
 Run master -> Examples -> Digital_Clock -> main.c
 Press button S2 to stop clock's ticking and enter the setting mode.
 Press button S1 to increase the value of a digit during the setting.
-
-## Functions
-
 
 ## Authors
 
