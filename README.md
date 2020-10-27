@@ -42,4 +42,4 @@ Press button S1 to increase the value of a digit during the setting.
  - Francesco Mecatti - I.T.I.S Enrico Fermi - Italy, Modena
 
 ## License
-This project is licensed under the MIT license - see the [LICENSE.md](license.md) file for details
+This project is licensed under the MIT license - see the [LICENSE](LICENSE) file for details
