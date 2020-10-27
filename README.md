@@ -16,9 +16,8 @@ To use this library you have to `#include "display7x4.h"`
 The `display7x4.c` library contains no external dependencies, it only requires one of the following compiler to be built successfully:
  - GNU for msp430f5529
  - TI compiler for msp430f5529
-These compilers have been tested and they work fine with the functions in the library.
 
-I suggest you to work on either CCS or IAR environments
+These compilers have been tested and they work fine with the functions in the library.
 
 ### How to use it
 Keep in mind to call the `init()` function before using any function defined in the library.
